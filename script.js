@@ -1,11 +1,16 @@
 //Functionality of the heart icon
-document.getElementById('heart-image').addEventListener('click',function(){
 
+    let HeartIcons=document.getElementsByClassName('fa-regular fa-heart');
     let HeartCount=document.getElementById('heart-count');
-    let HeartCountValue=parseInt(HeartCount.innerText);
-    //console.log(HeartCountValue);
-    HeartCountValue=HeartCountValue +1;
-    HeartCount.innerText=HeartCountValue;
 
+    //console.log(HeartIcons);
+    for(let HeartIcon of HeartIcons){
+          HeartIcon.addEventListener('click',function(){
+              let HeartCountValue=parseInt(HeartCount.innerText);
+              HeartCountValue=HeartCountValue+1;
+              HeartCount.innerText=HeartCountValue;    
+        
+      })
 
-})
+      }  
+            
